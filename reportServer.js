@@ -242,13 +242,13 @@ app.get("/errorsByEndpoint", async (req, res) => {
         } else {
             getDetailErrors = getDetailErrors + "Endpoint: " + allErrors[i].endpoint + ", time: " + allErrors[i].time + ", error: " + allErrors[i].error + ", "
         }
+    }
 
-        if(getAllErrors === "") {
-            getAllErrors = "No recent errors"
-        }
-        if(getDetailErrors === "") {
-            getDetailErrors = "No recent errors"
-        }
+    if(getAllErrors === "") {
+        getAllErrors = "No recent errors"
+    }
+    if(getDetailErrors === "") {
+        getDetailErrors = "No recent errors"
     }
 
     return res.status(200).json({"getAll": getAllErrors, "getDetails": getDetailErrors})
