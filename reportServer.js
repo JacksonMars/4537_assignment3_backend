@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const AccessTimes = require("./models/accessTimes")
 const EndpointAccess = require("./models/endpointAccess")
 const Error = require("./models/Error")
-const jwt_decode = require("jwt-decode");
 const jwt = require("jsonwebtoken");
 const userModel = require("./models/user.js");
 const refreshTokenModel = require("./models/refreshToken.js");
